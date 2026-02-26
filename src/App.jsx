@@ -4,6 +4,7 @@ import Auth from "./pages/Auth.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import NavBar from "./components/NavBar.jsx";
 import AuthProvider from "./context/AuthContext.jsx";
+import ProductDetails from "./pages/ProductDetails.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
     </div>
     </AuthProvider>

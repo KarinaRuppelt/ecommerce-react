@@ -1,5 +1,4 @@
 import { getProducts } from "../data/products";
-import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard.jsx";
 
 export default function Home() {
