@@ -5,19 +5,22 @@ import Checkout from "./pages/Checkout.jsx";
 import NavBar from "./components/NavBar.jsx";
 import AuthProvider from "./context/AuthContext.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import CartProvider from "./context/CartContext.jsx";
 
 function App() {
   return (
     <AuthProvider>
-    <div className="app">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-      </Routes>
-    </div>
+      <CartProvider>
+        <div className="app">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+          </Routes>
+        </div>
+      </CartProvider>
     </AuthProvider>
   );
 }
